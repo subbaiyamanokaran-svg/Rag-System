@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: rag_system
+Version: 0.1
+Requires-Dist: openai
+Requires-Dist: langchain
+Requires-Dist: faiss-cpu
+Requires-Dist: streamlit
+Requires-Dist: python-dotenv
+Requires-Dist: tiktoken
+Dynamic: requires-dist

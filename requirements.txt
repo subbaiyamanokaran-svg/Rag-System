@@ -1,0 +1,17 @@
+cohere
+langchain
+langchain-cohere
+langchain-community
+faiss-cpu
+streamlit
+PyMuPDF
+python-docx
+tiktoken
+python-dotenv
+scikit-learn
+Pillow
+torch
+transformers
+fastapi
+uvicorn
+python-multipart

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuMind AI - Intelligent Document Analysis</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-brain"></i>
+                <span>DocuMind AI</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+                <button class="btn btn-primary" onclick="scrollToChat()">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Transform Your Documents into <span class="gradient-text">Intelligent Insights</span></h1>
+                <p>Upload any PDF, DOCX, or TXT file and get instant, accurate answers powered by advanced AI. Perfect for research, legal documents, academic papers, and business reports.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large" onclick="scrollToChat()">
+                        <i class="fas fa-upload"></i>
+                        Upload Documents
+                    </button>
+                    <button class="btn btn-secondary btn-large" onclick="scrollToFeatures()">
+                        <i class="fas fa-play"></i>
+                        See How It Works
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">99.8%</span>
+                        <span class="stat-label">Accuracy</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">2.3s</span>
+                        <span class="stat-label">Avg Response</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Documents Processed</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="chat-preview">
+                    <div class="chat-header">
+                        <div class="chat-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span>DocuMind AI</span>
+                    </div>
+                    <div class="chat-messages">
+                        <div class="message user">
+                            <div class="message-content">What are the key findings in this research paper?</div>
+                        </div>
+                        <div class="message assistant">
+                            <div class="message-content">Based on the research paper, the key findings include...</div>
+                            <div class="message-sources">
+                                <span class="source-tag">Research Paper.pdf</span>
+                                <span class="source-tag">Page 15-18</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Powerful Features for Modern Work</h2>
+                <p>Everything you need to extract insights from your documents</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-upload"></i>
+                    </div>
+                    <h3>Multi-Format Support</h3>
+                    <p>Upload PDF, DOCX, and TXT files with drag-and-drop interface. No conversion needed.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Intelligent Search</h3>
+                    <p>Ask questions in natural language and get precise answers with source citations.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Lightning Fast</h3>
+                    <p>Get answers in seconds, not minutes. Optimized for speed and efficiency.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure & Private</h3>
+                    <p>Your documents are processed securely and never stored permanently.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>Chat History</h3>
+                    <p>Keep track of all your conversations and easily reference previous answers.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>API Access</h3>
+                    <p>Integrate DocuMind AI into your existing workflows with our robust API.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Interface -->
+    <section id="chat" class="chat-section">
+        <div class="container">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h2>Ask Questions About Your Documents</h2>
+                    <p>Upload documents below and start asking questions</p>
+                </div>
+                
+                <!-- Upload Section -->
+                <div class="upload-section">
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-content">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <h3>Drag & Drop Your Documents</h3>
+                            <p>or <span class="upload-link" onclick="document.getElementById('fileInput').click()">browse files</span></p>
+                            <small>Supports PDF, DOCX, TXT files</small>
+                        </div>
+                        <input type="file" id="fileInput" multiple accept=".pdf,.docx,.txt" style="display: none;">
+                    </div>
+                    <div class="upload-actions">
+                        <button class="btn btn-primary" id="indexBtn" onclick="indexDocuments()">
+                            <i class="fas fa-cog"></i>
+                            Index Documents
+                        </button>
+                        <button class="btn btn-secondary" onclick="clearDocuments()">
+                            <i class="fas fa-trash"></i>
+                            Clear All
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Document List -->
+                <div class="document-list" id="documentList">
+                    <h3>Uploaded Documents</h3>
+                    <div class="documents" id="documents">
+                        <div class="no-documents">
+                            <i class="fas fa-file"></i>
+                            <p>No documents uploaded yet</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Interface -->
+                <div class="chat-interface" id="chatInterface" style="display: none;">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="welcome-message">
+                            <i class="fas fa-robot"></i>
+                            <h3>Ready to Answer Your Questions!</h3>
+                            <p>Ask me anything about your uploaded documents. I'll provide accurate answers with source citations.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input-container">
+                        <div class="chat-input">
+                            <input type="text" id="messageInput" placeholder="Ask a question about your documents..." onkeypress="handleKeyPress(event)">
+                            <button class="btn btn-primary" onclick="sendMessage()">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="chat-actions">
+                            <button class="btn btn-secondary btn-sm" onclick="clearChat()">
+                                <i class="fas fa-eraser"></i>
+                                Clear Chat
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Choose the plan that fits your needs</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">9</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 100 documents/month</li>
+                        <li><i class="fas fa-check"></i> 1,000 questions/month</li>
+                        <li><i class="fas fa-check"></i> Standard support</li>
+                        <li><i class="fas fa-check"></i> Basic analytics</li>
+                    </ul>
+                    <button class="btn btn-outline">Get Started</button>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Professional</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">29</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 1,000 documents/month</li>
+                        <li><i class="fas fa-check"></i> 10,000 questions/month</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics</li>
+                        <li><i class="fas fa-check"></i> API access</li>
+                    </ul>
+                    <button class="btn btn-primary">Get Started</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">99</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Unlimited documents</li>
+                        <li><i class="fas fa-check"></i> Unlimited questions</li>
+                        <li><i class="fas fa-check"></i> 24/7 support</li>
+                        <li><i class="fas fa-check"></i> Custom integrations</li>
+                        <li><i class="fas fa-check"></i> On-premise deployment</li>
+                    </ul>
+                    <button class="btn btn-outline">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="nav-brand">
+                        <i class="fas fa-brain"></i>
+                        <span>DocuMind AI</span>
+                    </div>
+                    <p>Transforming documents into intelligent insights with the power of AI.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#">API</a>
+                        <a href="#">Documentation</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="#">About</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="#">Help Center</a>
+                        <a href="#">Community</a>
+                        <a href="#">Status</a>
+                        <a href="#">Security</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DocuMind AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Processing your request...</p>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/commercial-features.js"></script>
+</body>
+</html>
