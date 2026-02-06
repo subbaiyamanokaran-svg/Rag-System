@@ -228,13 +228,6 @@ EXPOSE 8000
 CMD ["python", "backend/main.py"]
 ```
 
-##  Support
-
-For support and questions:
--  Email: support@documind-ai.com
--  Discord: [Join our community](https://discord.gg/documind)
--  Documentation: [docs.documind-ai.com](https://docs.documind-ai.com)
--  Issues: [GitHub Issues](https://github.com/yourname/documind-ai/issues)
 
 ##  License
 
