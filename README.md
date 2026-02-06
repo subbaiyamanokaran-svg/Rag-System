@@ -1,31 +1,31 @@
-# 🧠 DocuMind AI - Professional Document Intelligence Platform
+#  DocuMind AI - Professional Document Intelligence Platform
 
 A modern, commercial-grade document intelligence platform that transforms your documents into intelligent insights using advanced AI technology.
 
-## ✨ Features
+##  Features
 
-### 🌐 Professional Web Interface
+###  Professional Web Interface
 - **Modern Design**: Beautiful, responsive interface that works on all devices
 - **Drag & Drop Upload**: Intuitive file upload with support for PDF, DOCX, and TXT files
 - **Real-time Chat**: Interactive Q&A interface with typing indicators
 - **Source Citations**: Every answer includes references to source documents
 - **Chat History**: Persistent conversation memory
 
-### 🤖 Advanced AI Capabilities
+###  Advanced AI Capabilities
 - **Multi-Format Support**: Process PDF, DOCX, and TXT documents
 - **Intelligent Search**: Natural language question answering
 - **Context Awareness**: AI understands document context and relationships
 - **High Accuracy**: Powered by Cohere's advanced language models
 - **Fast Responses**: Optimized for speed and efficiency
 
-### 🏢 Commercial Features
+###  Commercial Features
 - **Professional UI**: Enterprise-grade user interface
 - **API Access**: RESTful API for integration
 - **Scalable Architecture**: Built with FastAPI for high performance
 - **Security**: Secure document processing
 - **Analytics Ready**: Built-in metrics and monitoring
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 DocuMind AI/
@@ -48,7 +48,7 @@ DocuMind AI/
 └── README.md              # This file
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Option 1: Easy Startup (Recommended)
 
@@ -62,10 +62,10 @@ python run_website.py
 ```
 
 The script will:
-- ✅ Check your environment setup
-- 📦 Install all dependencies
-- 🚀 Start the web server
-- 🌐 Open your browser to http://localhost:8000
+-  Check your environment setup
+-  Install all dependencies
+-  Start the web server
+-  Open your browser to http://localhost:8000
 
 ### Option 2: Manual Setup
 
@@ -82,7 +82,7 @@ cd backend
 python main.py
 ```
 
-## 🔑 API Key Setup
+##  API Key Setup
 
 1. **Get Cohere API Key**:
    - Visit [https://cohere.com/](https://cohere.com/)
@@ -98,7 +98,7 @@ python main.py
      DATA_DIR=data
      ```
 
-## 🌐 Using the Web Interface
+##  Using the Web Interface
 
 ### 1. Upload Documents
 - Drag and drop files or click to browse
@@ -115,7 +115,7 @@ python main.py
 - Get instant answers with source citations
 - View chat history and manage conversations
 
-## 🔌 API Endpoints
+##  API Endpoints
 
 The platform provides a RESTful API:
 
@@ -129,7 +129,7 @@ The platform provides a RESTful API:
 ### API Documentation
 Visit `http://localhost:8000/docs` for interactive API documentation.
 
-## 💼 Commercial Features
+##  Commercial Features
 
 ### Professional Design
 - Modern, responsive interface
@@ -149,7 +149,7 @@ Visit `http://localhost:8000/docs` for interactive API documentation.
 - Chat history management
 - Source citation display
 
-## 🔧 Advanced Configuration
+##  Advanced Configuration
 
 ### Customizing the Interface
 Edit `static/css/style.css` to customize:
@@ -165,7 +165,7 @@ Modify `backend/main.py` to:
 - Add rate limiting
 - Customize response formats
 
-## 🛠️ Development
+##  Development
 
 ### Local Development
 ```bash
@@ -183,21 +183,21 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 3. **Styling**: Modify `static/css/style.css` for UI changes
 4. **Testing**: Use the API documentation at `/docs`
 
-## 📊 Performance
+##  Performance
 
 - **Fast Response Times**: Typically 2-3 seconds per query
 - **Scalable**: Built on FastAPI for high concurrency
 - **Memory Efficient**: Optimized document processing
 - **Caching**: Intelligent vector storage caching
 
-## 🔒 Security
+##  Security
 
 - **API Key Protection**: Secure environment variable handling
 - **File Validation**: Strict file type and size validation
 - **CORS Configuration**: Proper cross-origin resource sharing
 - **Input Sanitization**: Protection against malicious inputs
 
-## 📈 Monitoring
+##  Monitoring
 
 The platform includes built-in monitoring:
 - Health check endpoint (`/api/health`)
@@ -205,7 +205,7 @@ The platform includes built-in monitoring:
 - Performance metrics collection
 - User interaction analytics
 
-## 🚀 Deployment
+##  Deployment
 
 ### Production Deployment
 ```bash
@@ -228,18 +228,18 @@ EXPOSE 8000
 CMD ["python", "backend/main.py"]
 ```
 
-## 🤝 Support
+##  Support
 
 For support and questions:
-- 📧 Email: support@documind-ai.com
-- 💬 Discord: [Join our community](https://discord.gg/documind)
-- 📚 Documentation: [docs.documind-ai.com](https://docs.documind-ai.com)
-- 🐛 Issues: [GitHub Issues](https://github.com/yourname/documind-ai/issues)
+-  Email: support@documind-ai.com
+-  Discord: [Join our community](https://discord.gg/documind)
+-  Documentation: [docs.documind-ai.com](https://docs.documind-ai.com)
+-  Issues: [GitHub Issues](https://github.com/yourname/documind-ai/issues)
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-**Built with ❤️ using FastAPI, Cohere AI, and modern web technologies.**
+**Built using FastAPI, Cohere AI, and modern web technologies.**
